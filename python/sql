@@ -1,0 +1,7 @@
+import mysql.connector
+mydb=mysql.connector.connect(host="3306",user="root",password="root")
+
+mycursor = mydb.cursor()
+mycursor.excute("select * from student")
+for i in mycursor:
+	print(i)
